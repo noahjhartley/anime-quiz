@@ -2,7 +2,7 @@ import * as react from 'react';
 import { useEffect, useState } from 'react';
 import FilterConfig from '../../../utilities/FilterConfig/FilterConfig';
 import AnimeListing from '../../../utilities/AnimeConfig/AnimeListings';
-import AudioPlayer from '../../../ui/AudioPlayer';
+import YouTubePlayer from '../../../ui/YoutubePlayer';
 
 const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
     const [filteredAnime, setFilteredAnime] = useState(AnimeListing)
@@ -23,8 +23,8 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
         <div className="flex flex-col h-full w-1/4 mx-8">
             <h1 className="mt-5 text-center text-2xl">Categories</h1>
             <div className="w-4/5 mt-5 border-b-2 border-neutral-300 self-center"></div>
-            
-            <AudioPlayer videoId="1dNkQoE76nY" startSeconds={10} endSeconds={20} />
+
+            <YouTubePlayer videoId='1dNkQoE76nY' start={0} stop={13}/>
         </div>
 
     )
