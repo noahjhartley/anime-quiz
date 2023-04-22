@@ -8,6 +8,7 @@ FMABop1.artist = ["YUI"]
 FMABop1.url = "1dNkQoE76nY"
 FMABop1.chorusStart = 63
 FMABop1.chorusEnd = 77
+FMABop1.videoLength = 91
 FMABop1.lyrics = [
     "Kanaeru tame ni ikite'ru n datte Sakebitaku naru yo Kikoete imasu ka? \n Bunan ni nante yatte'rarenai kara... \n kaeru basho mo nai no \n Yasashisa niwa itsumo kansha shite'ru Dakara tsuyoku naritai (I'm on the way) \n Natsukashiku naru konna itami mo kangei jan",
     "Kono omoi wo keshite shimau niwa mada jinsei nagai desho? \n Yarinokoshi te'ru koto yarinaoshite mitai kara",
@@ -28,6 +29,7 @@ FMABop2.artist = ["NICO Touches the Walls"]
 FMABop2.url = "kTcobx_yh50"
 FMABop2.chorusStart = 56
 FMABop2.chorusEnd = 68
+FMABop2.videoLength = 91
 FMABop2.lyrics = [
     "Massugu na hikari ga kousa shi te \n yukisaki mo tsuge nu mama \n doko made mo tsukinukeru \n awai zanzou ryoume ni yakitsuke te \n todoku hazu nan da mada mi nu sekai he",
     "Masshiro na keshiki ni ima sasowa re te \n boku wa yuku yo mada mi nu sekai he",
@@ -48,6 +50,7 @@ FMABop3.artist = ["Sukima Switch"]
 FMABop3.url = "EORgrmt2cR0"
 FMABop3.chorusStart = 58
 FMABop3.chorusEnd = 71
+FMABop3.videoLength = 91
 FMABop3.lyrics = [
     "Zekkou no GOORUDEN TAIMU kono te de tsukame \n konshin no POOKAA FEISU kimete shikakeru yo \n IRYUUJON no sekai e hikizuri konde",
     "Shuuchuu dekite nai na mada karada ga mayotte iru 'n da \n furuete ita 'n ja KONTOROORU shitatte bure 'n da \n taiyou mo tsuki mo nan mo kanzen ni kocchi muite inai ga \n yaru shika nai 'n da iikikaseru you ni sou tsubuyaita",

@@ -36,7 +36,8 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
                         {label: "Random", value: "4"}
                     ]} 
                     linkButtonLabel='Start Quiz' 
-                    linkButtonUrl='' 
+                    linkButtonUrl='/OpeningQuiz' 
+                    animeList={filteredAnime}
                 />
                 <QuizButton 
                     buttonText='Endings' 
@@ -49,6 +50,7 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
                     ]} 
                     linkButtonLabel='Start Quiz' 
                     linkButtonUrl='' 
+                    animeList={filteredAnime}
                 />
                 <QuizButton 
                     buttonText='Lyrics' 
@@ -61,6 +63,7 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
                     ]} 
                     linkButtonLabel='Start Quiz' 
                     linkButtonUrl='' 
+                    animeList={filteredAnime}
                 />
                 <QuizButton 
                     buttonText='Translated Lyrics' 
@@ -73,6 +76,7 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
                     ]} 
                     linkButtonLabel='Start Quiz' 
                     linkButtonUrl='' 
+                    animeList={filteredAnime}
                 />
             </div>
         </div>

@@ -7,6 +7,7 @@ export default class Opening {
     englishLyrics: string[]
     chorusStart: number
     chorusEnd: number
+    videoLength: number;
 
     constructor() {
         this.number = 0
@@ -17,5 +18,6 @@ export default class Opening {
         this.englishLyrics = []
         this.chorusStart = 0
         this.chorusEnd = 0
+        this.videoLength = 0
     }
 }
