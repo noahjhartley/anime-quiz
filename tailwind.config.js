@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgblue: '#0EA8EA'
+        bgblue: '#0EA8EA',
+        bgbluedark: '#0D8ABF'
       },
       spacing: {
         192: '48rem',

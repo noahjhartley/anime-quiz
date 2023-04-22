@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Opening from './Opening';
 import Ending from './Ending';
 import Character from './Character';

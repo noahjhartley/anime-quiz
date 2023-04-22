@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import FilterConfig from '../../../utilities/FilterConfig/FilterConfig';
 import AnimeListing from '../../../utilities/AnimeConfig/AnimeListings';
 import YouTubePlayer from '../../../ui/YoutubePlayer';
+import QuizButton from '../../../ui/QuizButton';
 
 const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
     const [filteredAnime, setFilteredAnime] = useState(AnimeListing)
@@ -20,14 +21,74 @@ const Categories: React.FC<{filter: FilterConfig}> = ({ filter }) => {
     }, [filter])
 
     return(
-        <div className="flex flex-col h-full w-1/4 mx-8">
+        <div className="flex flex-col h-full w-full mx-8">
             <h1 className="mt-5 text-center text-2xl">Categories</h1>
             <div className="w-4/5 mt-5 border-b-2 border-neutral-300 self-center"></div>
 
-            <YouTubePlayer videoId='1dNkQoE76nY' start={0} stop={13}/>
+            <div className="flex flex-row mt-12 justify-around">
+                <QuizButton 
+                    buttonText='Openings' 
+                    menuOptions={[
+                        {label: "Beginning", value: "0"}, 
+                        {label: "Pre-Chorus", value: "1"},
+                        {label: "Chorus", value: "2"}, 
+                        {label: "End", value: "3"},
+                        {label: "Random", value: "4"}
+                    ]} 
+                    linkButtonLabel='Start Quiz' 
+                    linkButtonUrl='' 
+                />
+                <QuizButton 
+                    buttonText='Endings' 
+                    menuOptions={[
+                        {label: "Beginning", value: "0"}, 
+                        {label: "Pre-Chorus", value: "1"},
+                        {label: "Chorus", value: "2"}, 
+                        {label: "End", value: "3"},
+                        {label: "Random", value: "4"}
+                    ]} 
+                    linkButtonLabel='Start Quiz' 
+                    linkButtonUrl='' 
+                />
+                <QuizButton 
+                    buttonText='Lyrics' 
+                    menuOptions={[
+                        {label: "Beginning", value: "0"}, 
+                        {label: "Pre-Chorus", value: "1"},
+                        {label: "Chorus", value: "2"}, 
+                        {label: "End", value: "3"},
+                        {label: "Random", value: "4"}
+                    ]} 
+                    linkButtonLabel='Start Quiz' 
+                    linkButtonUrl='' 
+                />
+                <QuizButton 
+                    buttonText='Translated Lyrics' 
+                    menuOptions={[
+                        {label: "Beginning", value: "0"}, 
+                        {label: "Pre-Chorus", value: "1"},
+                        {label: "Chorus", value: "2"}, 
+                        {label: "End", value: "3"},
+                        {label: "Random", value: "4"}
+                    ]} 
+                    linkButtonLabel='Start Quiz' 
+                    linkButtonUrl='' 
+                />
+            </div>
         </div>
 
     )
 }
 
 export default Categories
+
+{/* <div className="w-full">
+    <YouTubePlayer videoId={filteredAnime[0].ops[2].url} start={filteredAnime[0].ops[2].chorusStart} stop={filteredAnime[0].ops[2].chorusEnd}/>
+    <div>{filteredAnime[0].ops[1].title}</div>
+    
+    <div>{filteredAnime[0].ops[1].artist}</div>
+    
+    <div>{filteredAnime[0].ops[1].lyrics[0].split('\n').map(str => <p>{str}</p>)}</div>
+    
+    <div>{filteredAnime[0].ops[1].englishLyrics[0].split('\n').map(str => <p>{str}</p>)}</div>
+</div> */}
