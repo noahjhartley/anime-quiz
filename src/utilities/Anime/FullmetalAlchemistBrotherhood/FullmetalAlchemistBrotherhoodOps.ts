@@ -1,7 +1,6 @@
-import * as react from "react"
 import Opening from "../../AnimeConfig/Opening";
 
-const FMABop1 = new Opening;
+const FMABop1 = new Opening();
 FMABop1.number = 1
 FMABop1.title = ["again"]
 FMABop1.artist = ["YUI"]
@@ -22,7 +21,7 @@ FMABop1.englishLyrics = [
     "Tears aren't the end of sin. You carry it heavy on your back forever. \n Who is it you're waiting for in this maze of emotion you can't find your way out of? \n I want to let it all spill already like I was writing in a blank notebook. \n What're you're trying to get away from, this thing we call reality?",
 ]
 
-const FMABop2 = new Opening;
+const FMABop2 = new Opening();
 FMABop2.number = 2
 FMABop2.title = ["Hologram"]
 FMABop2.artist = ["NICO Touches the Walls"]
@@ -43,7 +42,7 @@ FMABop2.englishLyrics = [
     "I pretended to be strong and got hurt \n as if they looked through my heart \n The raindrops that started to fall repeatedly ricochet everywhere"
 ]
 
-const FMABop3 = new Opening;
+const FMABop3 = new Opening();
 FMABop3.number = 3
 FMABop3.title = ["Golden Time Lover"]
 FMABop3.artist = ["Sukima Switch"]
@@ -64,10 +63,53 @@ FMABop3.englishLyrics = [
     "Escaping from this endless pressure game \n so I can clear the borderline of glory \n How many? How many reparations must be made? \n What do you wish to avoid losing hold of?"
 ]
 
+const FMABop4 = new Opening();
+FMABop4.number = 4
+FMABop4.title = ["Period"]
+FMABop4.artist = ["Chemistry"]
+FMABop4.url = "tjYRi6tucpE"
+FMABop4.chorusStart = 46
+FMABop4.chorusEnd = 61
+FMABop4.videoLength = 90
+FMABop4.lyrics = [
+    "Kokoro wo tsunagu tsuyoi kizuna wa \n Keshite hodoke wa shinai sa \n Sagashitsuzukete tadoritsuita \n Kono basho de period ni",
+    "Owari naki tabi no tochuu tachidomarisou na toki \n Fukai tameiki kobosu bokura wa \n Tsukamikakete wa mata hanareteita \n Demo ima wa mou nanimo osoreru koto wa nai",
+    "Kanashimi ikari chikara ni kaete \n Unmei wa sugu soba ni"
+]
+FMABop4.englishLyrics = [
+    "The strong bonds that tie our hearts, \n Will certainly never be undone. \n We have continually searched and finally reached, \n This place and period",
+    "In the middle of an endless journey, at a point when we seem to stop, \n We let loose a deep sigh.",
+    "We started to grasp it, but it parted from us. \n However, now there is no longer anything we are afraid of.",
+    "Change sadness and anger into strength. \n Our fate is right nearby"
+]
+
+const FMABop5 = new Opening();
+FMABop5.number = 5
+FMABop5.title = ["Rain"]
+FMABop5.artist = ["Sid"]
+FMABop5.url = "woYvDqZREpM"
+FMABop5.chorusStart = 43
+FMABop5.chorusEnd = 62
+FMABop5.videoLength = 90
+FMABop5.lyrics = [
+    "Ame wa itsuka yamu no deshou ka \n Zuibun nagai aida tsumetai \n Ame wa dou shite boku wo erabu no \n Tsutsumarete ii ka na",
+    "Yatto mitsuketa atarashii asa wa \n Tsukihi ga jama wo suru \n Mukau saki wa 'tsugi' ja nakute \n 'sugi' bakari oikaketa",
+    "Nariyamanai youshanai omoidetachi wa \n Yurushitekuresou ni mo nai \n Sorosoro ka na tesaguri tsukareta hoho wo \n Kattou ga koboreochiru",
+    "Ame wa yamu koto wo shirazu ni \n Kyou mo furitsuzuku keredo \n Sotto sashidashita kasa no naka de \n Nukumori ni yorisoinagara"
+]
+FMABop5.englishLyrics = [
+    "When will this rain stop? I've been cold for so long \n Why did the rain choose me? \n Will it be okay to wrap myself in it?",
+    "Time gets in the way of the new morning that I finally found \n It wasn't 'Next' I was heading for, but 'Past' I was always chasing",
+    "It doesn't seem as if these unrelenting memories echoing in my mind will forgive me \n Any time now, my turmoil will spill down these cheeks worn out by my fumbling",
+    "I don't know when the rain will stop, and it keeps pouring down even today \n As we softly huddle close together for warmth under an extended umbrella"
+]
+
 let FMABops:Opening[] = [
     FMABop1,
     FMABop2,
-    FMABop3
+    FMABop3,
+    FMABop4,
+    FMABop5
 ]
 
 export default FMABops

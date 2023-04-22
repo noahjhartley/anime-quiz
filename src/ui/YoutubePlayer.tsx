@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
 declare global {
@@ -6,7 +6,6 @@ declare global {
         YT: any;
     }
 }
-  
 
 interface Props {
   videoId: string;
@@ -35,8 +34,6 @@ const YouTubePlayer: React.FC<Props> = ({ videoId, start, stop }) => {
   };
 
   function onStateChange(event: any) {
-    console.log(Math.floor(playerRef.current.getCurrentTime()))
-    console.log(stop)
     if (Math.floor(playerRef.current.getCurrentTime()) === stop) {
         playerRef.current.seekTo(start);
         togglePlaying();
@@ -50,6 +47,10 @@ const YouTubePlayer: React.FC<Props> = ({ videoId, start, stop }) => {
       end: stop ? stop : undefined,
     },
   };
+
+  useEffect(() =>{
+    //setIsPlaying(false)
+  })
 
   return (
     <div>

@@ -5,7 +5,7 @@ import FullmetalAlchemistBrotherhoodEds from "./FullmetalAlchemistBrotherhoodEds
 import FullmetalAlchemistBrotherhoodCharacters from "./FullmetalAlchemistBrotherhoodCharacters";
 
 const FullmetalAlchemistBrotherhood = new AnimeConfig;
-FullmetalAlchemistBrotherhood.title = ["Fullmetal Alchemist: Brotherhood", "FMA:B", "FMAB", "Hagane no Renkinjutsushi"]
+FullmetalAlchemistBrotherhood.title = ["Fullmetal Alchemist: Brotherhood", "FMA:B", "FMAB", "Fullmetal Alchemist Brotherhood", "Hagane no Renkinjutsushi"]
 FullmetalAlchemistBrotherhood.genre = ["Action", "Adventure", "Drama", "Fantasy"]
 FullmetalAlchemistBrotherhood.aired = [2009, 2010]
 FullmetalAlchemistBrotherhood.studio = ["Bones"]
