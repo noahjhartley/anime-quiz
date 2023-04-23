@@ -1,9 +1,11 @@
 import * as react from "react"
 import AnimeConfig from "./AnimeConfig";
-import FullmetalAlchemistBrotherhoodConfig from "../Anime/FullmetalAlchemistBrotherhood/FullmetalAlchemistBrotherhoodConfig"
+import FullmetalAlchemistBrotherhood from "../Anime/FullmetalAlchemistBrotherhood/FullmetalAlchemistBrotherhoodConfig"
+import TheDisastrousLifeOfSaikiK from "../Anime/TheDisastrousLifeOfSaikiK/TheDisastrousLifeOfSaikiKConfig";
 
 const AnimeListing = [
-    FullmetalAlchemistBrotherhoodConfig
+    FullmetalAlchemistBrotherhood,
+    TheDisastrousLifeOfSaikiK
 ]
 
 export default AnimeListing

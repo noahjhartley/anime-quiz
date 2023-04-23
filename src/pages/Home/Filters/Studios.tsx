@@ -19,7 +19,8 @@ const studios = [
     'Lerche',
     'Shin-Ei Animation',
     'ufotable',
-    'Bones'
+    'Bones',
+    'EggFirm'
 ]
 
 const Studios: React.FC<{ selectedStudios: string[], updateStudios: (genres: string[]) => void }> = ({ selectedStudios, updateStudios }) => {

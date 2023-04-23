@@ -68,7 +68,7 @@ FMABed3.englishLyrics = [
 
 const FMABed4 = new Ending();
 FMABed4.number = 4
-FMABed4.title = ["Shunkan Sentimental", "Sentimental Moment", "歌詞"]
+FMABed4.title = ["Shunkan Sentimental", "Sentimental Moment"]
 FMABed4.artist = ["SCANDAL"]
 FMABed4.url = "yxkyElx0pXI"
 FMABed4.chorusStart = 48
