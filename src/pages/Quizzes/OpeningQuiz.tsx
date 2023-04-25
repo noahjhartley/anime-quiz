@@ -16,51 +16,70 @@ export default function OpeningQuiz() {
     const navigate = useNavigate()
     const { type, animeList } = location.state as QuizState;
 
+    const [start, setStart] = useState(0); //video start point
+    const [end, setEnd] = useState(0); //video end point
+    const [currentAnime, setCurrentAnime] = useState<AnimeConfig>(new AnimeConfig()) //the currently loaded anime
+    const [currentAnimeIndex, setCurrentAnimeIndex] = useState<number>(0) //the index of animeList that decides currentAnime
+    const [currentOp, setCurrentOp] = useState<Opening>(new Opening()) //the currently loaded opening from the currently loaded anime
+    const [currentOpIndex, setCurrentOpIndex] = useState<number>(0) //the index of currentAnime.ops that decides currentOp
+    const [userAnswer, setUserAnswer] = useState<string>("") //user answer from text box
+    const [numCorrect, setNumCorrect] = useState<number>(0) //number of correct answers
+    const [played, setPlayed] = useState<boolean[][]>([[]]) //2d boolean array, for played[i][j], set the length of i = animeList.length and the length of each j to animeList[i].ops.length
+
     function randomIntFromInterval(min: number, max: number) {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-    const [start, setStart] = useState(0);
-    const [end, setEnd] = useState(0);
-
-    function setStartEnd() {
+    function setDuration() {
         switch (type) {
         case "0":
             setStart(0);
             setEnd(15);
             break;
         case "1":
-            setStart(currentAnime.ops[currentOpIndex].chorusStart - 15);
-            setEnd(currentAnime.ops[currentOpIndex].chorusStart);
+            setStart(currentOp.chorusStart - 15);
+            setEnd(currentOp.chorusStart);
             break;
         case "2":
-            setStart(currentAnime.ops[currentOpIndex].chorusStart);
-            setEnd(currentAnime.ops[currentOpIndex].chorusEnd);
+            setStart(currentOp.chorusStart);
+            setEnd(currentOp.chorusEnd);
             break;
         case "3":
-            setStart(currentAnime.ops[currentOpIndex].videoLength - 15);
-            setEnd(currentAnime.ops[currentOpIndex].videoLength);
+            setStart(currentOp.videoLength - 15);
+            setEnd(currentOp.videoLength);
             break;
         case "4":
-            let rnd = randomIntFromInterval(0, animeList[0].ops[2].videoLength - 15);
+            let rnd = randomIntFromInterval(0, currentOp.videoLength - 15);
             setStart(rnd);
             setEnd(rnd + 15);
             break;
         }
     }
 
-    const [currentAnime, setCurrentAnime] = useState<AnimeConfig>(new AnimeConfig())
-    const [currentOpIndex, setCurrentOpIndex] = useState<number>(0)
-    const [currentOp, setCurrentOp] = useState<Opening>(new Opening())
-    const [userAnswer, setUserAnswer] = useState<string>("")
-    const [playedOps, setPlayedOps] = useState<boolean[][]>([[]])
-    const [numCorrect, setNumCorrect] = useState<number>(0)
-
-    const nextOp = () => {
-        
+    const nextAnime = () => {
+        //Assign new currentAnimeIndex use randomIntFromInterval(0, animeList.length-1)
+        //Assign new anime using animeList[currentAnimeIndex]
+        //call nextOp to assign a new op
     }
 
-    
+    const nextOp = () => {
+        //Assign new currentOpIndex using randomIntFromInterval(0, currentAnime.ops.length-1)
+        //Assign new opening using currentAnime.ops[randomIntFromInterval]
+        //If the selected opening has already been used (played[currentAnimeIndex][currentOpeningIndex] === true), assign a new opening until one that hasn't been used is found
+        //Call setDuration to set a new duration
+    }
+
+    const handleSkip = () => {
+        //set the current opening to played
+        //Call nextAnime to assign a new anime
+    }
+
+    useEffect(() => {
+        if (currentAnime.title.some(item => userAnswer.includes(item))) {
+            setNumCorrect(numCorrect + 1)
+            nextAnime()
+        }
+    }, [userAnswer])
   
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
@@ -81,7 +100,7 @@ export default function OpeningQuiz() {
                     onChange={() => setUserAnswer(userAnswer)}
                     autoComplete="off"
                 />
-                <button type="button" className="bg-gray-300 text-gray-700 rounded-md px-4 py-2 hover:bg-gray-400" onClick={nextOp}>
+                <button type="button" className="bg-gray-300 text-gray-700 rounded-md px-4 py-2 hover:bg-gray-400" onClick={handleSkip}>
                     Skip
                 </button>
             </form>
