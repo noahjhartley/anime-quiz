@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WIP Website for randomly generated trivia quizzes, featuring opening and ending themes, lyrics, and characters from various popular anime.
 
 ## Available Scripts
 
